@@ -25,8 +25,9 @@ npm run dev
 
  ```mermaid
   sequenceDiagram
-      Client->>Server: Hello John, how are you?
-      Server-->>Client: Great!
-      Client->>Server: See you later!
+      Client->>Server: Crendenciales de usuario {username, password}
+      Server-->>Client: Envía el {JWT} encriptado al cliente!
+      Note right of Server: Valida las credenciales y crea el {JWT} para el ususario 
+      Client->>Server: Envía la autorizaciín de solicitud con el {JWT} en la cabecera utilizando Bearer + Token!
   ```
 
