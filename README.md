@@ -19,11 +19,12 @@ npm install
 npm run dev
 ```
 
+# Diagrama de Funcionamiento
 
  ```mermaid
   sequenceDiagram
-      Alice->>John: Hello John, how are you?
-      John-->>Alice: Great!
-      Alice->>John: See you later!
+      Client->>John: Hello John, how are you?
+      Server-->>Alice: Great!
+      Client->>John: See you later!
   ```
 
