@@ -23,8 +23,8 @@ npm run dev
 
  ```mermaid
   sequenceDiagram
-      Client->>John: Hello John, how are you?
-      Server-->>Alice: Great!
-      Client->>John: See you later!
+      Client->>Server: Hello John, how are you?
+      Server-->>Client: Great!
+      Client->>Server: See you later!
   ```
 
