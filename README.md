@@ -21,7 +21,12 @@ npm install
 npm run dev
 ```
 
-# Diagrama de Funcionamiento
+# Funcionamiento
+El programa, como anteriormente lo mencioné
+
+## Diagrama de Funcionamiento Gestion de usuarios
+
+Básicamente el funcionameinto de la aplica
 
  ```mermaid
   sequenceDiagram
@@ -29,7 +34,7 @@ npm run dev
       Note right of Server: Valida las credenciales y crea el {JWT} para el ususario 
       Server-->>Client: Envía el {JWT} encriptado al cliente!
       Note right of Server: Verifica la firma del {JWT} y obtiene la información de este mismo y de la petición
-      Client->>Server: Envía la autorización de solicitud con el {JWT} en la cabecera utilizando Bearer + Token!
+      Client->>Server: Envía la autorización y solicitud con el {JWT} en la cabecera utilizando Bearer + Token!
       Server-->>Client: Envía la respuesta al cliente
   ```
 
