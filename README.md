@@ -70,6 +70,16 @@ http://localhost:8080/api/final-app/addsales
 > [!NOTE]
 > El token tiene una duración de 1H por lo que si se agota debes iniciar sesión de nuevo.
 
+3. Una vez teniendo el token ya puedes consumir los recursos de la aplicación, algunos son libres de permisos otros si debes colocar el Type Auth, que en este caso es Bearer + el Token recibido, por ejemplo si quieres agregar un nuevo usuario lo haces por la siguiente dirección **http://localhost:8080/api/final-app/users** y el método de envio es POST, junto con el usuario en json a enviar:
+```json
+{
+    "username": "camilo1",
+    "password": "camilo1",
+    "email": "camilucho@gmail.com",
+    "isAdmin": "false"
+}
+``` 
+
  ```mermaid
   sequenceDiagram
       Client->>Server: Crendenciales de usuario {username, password}
