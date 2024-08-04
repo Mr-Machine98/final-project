@@ -22,7 +22,18 @@ npm run dev
 ```
 
 # Funcionamiento
-El programa, como anteriormente lo mencioné
+El programa, como anteriormente lo mencioné simula el carrito de compras de una tienda web, además el inicio de sesión y la administración de usuarios presentes en la base de datos.
+El funcionamiento de la compra de items es básicamente sencilla, se seleccionan los items a comprar y se manda un arreglo de estos items con los siguientes atributos:
+```Java 
+public class Sale {
+    	private long id;
+    	private Integer quantity;
+    	private BigDecimal subTotal;
+    	private LocalDateTime dateSale;
+    	private String owner;
+    	private Product product;
+}
+```
 
 ## Diagrama de Funcionamiento Gestion de usuarios
 
