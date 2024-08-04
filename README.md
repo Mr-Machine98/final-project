@@ -100,7 +100,7 @@ Todo la explicación se puede ver en el siguiente diagrama:
       Server-->>Client: Envía la respuesta al cliente
   ```
 # Endpoints Recursos para consumir
-Las direcciones que no tienen el método .permitAll() no necesitan el Bearer + Token
+Las direcciones que no tienen el método **.permitAll()** no necesitan el Bearer + Token
 ```java
 requestMatcher
 	.requestMatchers(HttpMethod.GET, "/api/final-app/all").permitAll()
