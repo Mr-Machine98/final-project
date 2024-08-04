@@ -51,7 +51,7 @@ http://localhost:8080/api/final-app/addsales
 
 ## Diagrama de Funcionamiento Gestion de usuarios
 
-Para el proceso de inicio de sesión y la administración de usuarios funcionan mediante JWT y la seguridad de SpringBoot, el primer paso es realizar el login enviando en el body el usuario a iniciar sesión por la dirección **http://localhost:8080/login**:
+1. Para el proceso de inicio de sesión y la administración de usuarios funcionan mediante JWT y la seguridad de SpringBoot, el primer paso es realizar el login enviando en el body el usuario a iniciar sesión por la dirección **http://localhost:8080/login**
 ```JSON
 {
     "username": "admin",
@@ -59,6 +59,16 @@ Para el proceso de inicio de sesión y la administración de usuarios funcionan 
 }
 
 ```
+2. Luego el servidor verifica los datos enviados y te notifica si son correctos o no, si están correctos te crea el Token de seguridad del usuario que ha iniciado sesión listo para utilizar y consumir los recursos, la respuesta del servidor será la siguiente:
+```JSON
+{
+    "message": "Ey admin, you have logged in! ",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjoiW3tcImF1dGhvcml0eVwiOlwiUk9MRV9BRE1JTlwifSx7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJpc0FkbWluIjp0cnVlLCJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzIyNzg3MzA4LCJleHAiOjE3MjI3OTA5MDh9.UjovuY69LidXjJR6_doQudHS8jldipzVjhPjmlW_At8",
+    "username": "admin"
+}
+```
+> [!NOTE]
+> El token tiene una duración de 1H por lo que si se agota debes iniciar sesión de nuevo.
 
  ```mermaid
   sequenceDiagram
