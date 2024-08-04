@@ -53,7 +53,6 @@ export function UserForm() {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        console.log(userForm);
         handlerAddOrUpdateUser(userForm);
     };
 
