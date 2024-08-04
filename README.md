@@ -99,4 +99,18 @@ Todo la explicación se puede ver en el siguiente diagrama:
       Client->>Server: Envía la autorización y solicitud con el {JWT} en la cabecera utilizando Bearer + Token!
       Server-->>Client: Envía la respuesta al cliente
   ```
-
+# Endpoints Recursos para consumir
+Las dirreciones que no tienen el método .permitAll() no necesitan el Bearer + Token
+```java
+requestMatcher
+				.requestMatchers(HttpMethod.GET, "/api/final-app/all").permitAll()
+				.requestMatchers(HttpMethod.GET, "/api/final-app/users/all").permitAll()
+				.requestMatchers(HttpMethod.GET, "/api/final-app/users/{id}").permitAll()
+				.requestMatchers(HttpMethod.GET, "/api/final-app/users/page/{page}").permitAll()
+				.requestMatchers(HttpMethod.POST, "/api/final-app/addsales").permitAll()
+				.requestMatchers(HttpMethod.POST, "/api/final-app/users").hasAnyRole("ADMIN")				
+				.requestMatchers(HttpMethod.PUT, "/api/final-app/users/{id}").hasAnyRole("ADMIN")				
+				.requestMatchers(HttpMethod.DELETE, "/api/final-app/users/{id}").hasAnyRole("ADMIN")				
+				.anyRequest()
+				.authenticated()
+```
