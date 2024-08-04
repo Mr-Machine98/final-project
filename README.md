@@ -114,3 +114,33 @@ requestMatcher
 		.anyRequest()
 		.authenticated()
 ```
+
+
+# Importante
+Cuando la aplicación se ejecuta ya se cargan por defecto usuarios para probar la aplicación busca en el backend el archivo **import.sql**, ahí verás toda la info que se carga, por ejemplo:
+```SQL
+-- ADD Users // every users have their passwords like 123
+INSERT INTO users (username, password, email) VALUES ('admin', '$2a$12$rNBkM/7TWErVjxmsEVE5ZO02KCO59OnIhwzr/j1jD0re3rxGilowW', 'mr.machineman98@gmail.com');
+INSERT INTO users (username, password, email) VALUES ('admin1', '$2a$12$rNBkM/7TWErVjxmsEVE5ZO02KCO59OnIhwzr/j1jD0re3rxGilowW', 'admin1@gmail.com');
+INSERT INTO users (username, password, email) VALUES ('admin2', '$2a$12$rNBkM/7TWErVjxmsEVE5ZO02KCO59OnIhwzr/j1jD0re3rxGilowW', 'admin2@gmail.com');
+INSERT INTO users (username, password, email) VALUES ('admin3', '$2a$12$rNBkM/7TWErVjxmsEVE5ZO02KCO59OnIhwzr/j1jD0re3rxGilowW', 'admin3@gmail.com');
+INSERT INTO users (username, password, email) VALUES ('admin4', '$2a$12$rNBkM/7TWErVjxmsEVE5ZO02KCO59OnIhwzr/j1jD0re3rxGilowW', 'admin4@gmail.com');
+INSERT INTO users (username, password, email) VALUES ('admim5', '$2a$12$rNBkM/7TWErVjxmsEVE5ZO02KCO59OnIhwzr/j1jD0re3rxGilowW', 'admin5@gmail.com');
+INSERT INTO users (username, password, email) VALUES ('admin6', '$2a$12$rNBkM/7TWErVjxmsEVE5ZO02KCO59OnIhwzr/j1jD0re3rxGilowW', 'admin6@gmail.com');
+```
+# Tecnologías usadas
+Frontend
+- Redux
+- Axios
+- semantic-ui
+- sweetalert2
+- React
+Backend
+- Java
+- PostgreSQL
+- Spring Scurity
+- Spring JPA
+- Lombok
+- Spring Web
+- Spring Validation
+- JWT
