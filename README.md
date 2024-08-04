@@ -135,6 +135,8 @@ Frontend
 - semantic-ui
 - sweetalert2
 - React
+
+  
 Backend
 - Java
 - PostgreSQL
