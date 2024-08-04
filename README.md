@@ -79,6 +79,16 @@ http://localhost:8080/api/final-app/addsales
     "isAdmin": "false"
 }
 ``` 
+4. El servidor te responderá dependiendo del recurso consumido, por ejemplo al crear el usuario este te responderá con un **status 201 Created** y te devuelve el objeto creado:
+
+```json
+{
+    "id": 8,
+    "username": "camilo1",
+    "email": "camilucho@gmail.com",
+    "isAdmin": false
+}
+```
 
  ```mermaid
   sequenceDiagram
