@@ -22,6 +22,7 @@ npm run dev
 ```
 
 # Funcionamiento
+
 El programa, como anteriormente lo mencioné simula el carrito de compras de una tienda web, además el inicio de sesión y la administración de usuarios presentes en la base de datos.
 El funcionamiento de la compra de items es básicamente sencilla, se seleccionan los items a comprar y se manda un arreglo de estos items con los siguientes atributos:
 ```Java 
@@ -34,10 +35,23 @@ public class Sale {
     	private Product product;
 }
 ```
+Los endpoints para consumir e enviar los recursos de las compras son los siguientes:
+```
+http://localhost:8080/api/final-app/all
+
+http://localhost:8080/api/final-app/addsales
+```
 
 ## Diagrama de Funcionamiento Gestion de usuarios
 
-Básicamente el funcionameinto de la aplica
+Para el proceso de inicio de sesión y la administración de usuarios funcionan mediante JWT y la seguridad de SpringBoot, el primer paso es realizar el login enviando en el body el usuario a iniciar sesión por la dirección **http://localhost:8080/login**:
+```JSON
+{
+    "username": "admin",
+    "password": "123"
+}
+
+```
 
  ```mermaid
   sequenceDiagram
