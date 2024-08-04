@@ -89,7 +89,7 @@ http://localhost:8080/api/final-app/addsales
     "isAdmin": false
 }
 ```
-
+Todo la explicación se puede ver en el siguiente diagrama:
  ```mermaid
   sequenceDiagram
       Client->>Server: Crendenciales de usuario {username, password}
