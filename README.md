@@ -36,14 +36,18 @@ public class Sale {
 }
 ```
 
+
+
 > [!IMPORTANT]
-> Los endpoints para consumir e enviar los recursos de las compras son los siguientes.
+> Los endpoints para consumir e enviar los recursos de las compras son los siguientes:
 
 ```
 http://localhost:8080/api/final-app/all
 
 http://localhost:8080/api/final-app/addsales
 ```
+
+
 
 ## Diagrama de Funcionamiento Gestion de usuarios
 
